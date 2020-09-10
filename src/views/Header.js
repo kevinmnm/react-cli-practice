@@ -4,10 +4,10 @@ import './Header.css';
 const Header = () => {
    return (
       <div className='navigator'>
-         <div>Home</div>
-         <div>Route #1</div>
-         <div>Route #2</div>
-         <div>Route #3</div>
+         <div className='route-home'>Home</div>
+         <div className='route-1'>Route_1</div>
+         <div className='route-2'>Route_2</div>
+         <div clssName='route-3'>Route_3</div>
       </div>
    );
 }

@@ -1,7 +1,22 @@
 .body{
-   position: relative;
+   position: absolute;
    top: 50px;
    width: 100%;
    box-sizing: border-box;
    background: lightGreen;
+   text-align: center;
+   height: calc(100% - 100px);
+}
+
+.body-title{
+   position: relative;
+   font-weight: bold;
+   color: white;
+}
+
+.body-current-value{
+   position: relative;
+   height: 25px;
+   font-weight: bold;
+   color: royalblue;
 }

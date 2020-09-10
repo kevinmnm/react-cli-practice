@@ -35,7 +35,7 @@ class Footer extends React.Component {
       });
    }
 
-   random_boolean = () => {
+   random_boolean = () => { //No need to bind(this).
       this.setState( prev => {
          return {
             random: {
