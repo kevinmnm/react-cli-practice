@@ -20,3 +20,20 @@
    font-weight: bold;
    color: royalblue;
 }
+
+.body-board{
+   position: relative;
+   width: 50%;
+   box-sizing: border-box;
+   border: 2px solid red;
+   margin: auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+.player-wrap,
+.score-wrap{
+   display: flex;
+   flex-direction: column;
+}

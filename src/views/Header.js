@@ -7,7 +7,7 @@ const Header = () => {
          <div className='route-home'>Home</div>
          <div className='route-1'>Route_1</div>
          <div className='route-2'>Route_2</div>
-         <div clssName='route-3'>Route_3</div>
+         <div className='route-3'>Route_3</div>
       </div>
    );
 }
