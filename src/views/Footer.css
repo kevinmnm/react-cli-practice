@@ -5,4 +5,29 @@
    height: 100px;
    box-sizing: border-box;
    background: lightSkyBlue;
+   text-align: center;
+}
+
+.footer-title{
+   position: relative;
+   font-weight: bold;
+   font-family: 'Nunito', sans-serif;
+   margin-top: 2px;
+}
+
+.flex-wrap{
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.random-value{
+   width: 25px;
+   height: 25px;
+   color: white;
+   position: relative;
+   margin: auto;
+   box-sizing: border-box;
 }
