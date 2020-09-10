@@ -11,8 +11,40 @@ class Footer extends React.Component {
       }
    }
    
-   random_number = () => {
+   random_number(){ //Need to bind(this).
+      this.setState( prev => {
+         return {
+            random: {
+               text: prev.random.text,
+               boolean: prev.random.boolean,
+               number: Math.floor(Math.random()*10+1)
+            }
+         }
+      });
+   }
 
+   random_text = () => { //No need to bind(this).
+      this.setState( prevState => {
+         return {
+            random: {
+               number: prevState.random.number,
+               boolean: prevState.random.boolean,
+               text: Math.random().toString(36).replace(/[^a-z]+/g,'').substr(0,5)
+            }
+         }
+      });
+   }
+
+   random_boolean = () => {
+      this.setState( prev => {
+         return {
+            random: {
+               number: prev.random.number,
+               text: prev.random.text,
+               boolean: (Math.random() > 0.5) ? 'True' : 'False'
+            }
+         }
+      });
    }
 
 
@@ -28,7 +60,7 @@ class Footer extends React.Component {
                   <div className='number random-value'>
                      { this.state.random.number }
                   </div>
-                  <button>Click</button>
+                  <button onClick={ this.random_number.bind(this) }>Click</button>
                </div>
             
                <div className='random-text'>
@@ -36,7 +68,7 @@ class Footer extends React.Component {
                   <div className='text random-value'>
                      { this.state.random.text }
                   </div>
-                  <button>Click</button>
+                  <button onClick={ this.random_text }>Click</button>
                </div>
 
                <div className='random-boolean'>
@@ -44,7 +76,7 @@ class Footer extends React.Component {
                   <div className='boolean random-value'>
                      { this.state.random.boolean }
                   </div>
-                  <button>Click</button>
+                  <button onClick={ this.random_boolean }>Click</button>
                </div>
             
             </div>
